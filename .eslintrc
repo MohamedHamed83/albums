@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    // enforce spacing inside array brackets
+    "array-bracket-spacing": [2, "never"],
+    // disallow unnecessary semicolons
+    "no-extra-semi": 0,
+    "semi-spacing": 0,
+    "eqeqeq": "off",
+    "curly": "warn",
+    // require camel case names
+    "camelcase": [2, {
+      "properties": "never"
+    }],
+    // enforce one true comma style
+    "comma-style": [2, "last"],
+    // require or disallow use of semicolons instead of ASI
+    "semi": [2, "always"],
+    "quotes": ["warn", "single"]
+  }
+}
