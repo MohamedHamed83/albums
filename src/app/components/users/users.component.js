@@ -9,9 +9,9 @@ export class usersController {
   }
   // get selected item from the list view
   getSelectedListItem(item) {
-    this.$resourceService.loadRoute('albumsPerUser',{
+    this.$resourceService.loadRoute('albumsPerUser', {
       userId: item.id
-    } );
+    });
   }
   $onInit() {
 
