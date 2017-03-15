@@ -1,0 +1,8 @@
+<div class="menu-collapsed" ng-click="navbarCtrl.menuCollapsed()">
+  <div class="bar"></div>
+  <nav>
+    <ul>
+      <li ng-repeat="navItems in navbarCtrl.mainLinks" class="{{navItems.status}}"><a ui-sref="{{navItems.uiSref}}" ui-sref-active="active">{{navItems.text}}</a></li>
+    </ul>
+  </nav>
+</div>

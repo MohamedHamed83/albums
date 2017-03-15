@@ -1,0 +1,18 @@
+footer-component {
+  opacity: 0.7;
+  position: fixed !important;
+  left: 0px;
+  @include make-xs-column(12, 0);
+  @include make-sm-column(12, 0);
+  @include make-md-column(12, 0);
+  @include make-lg-column(12, 0);
+  @include make-xl-column(12, 0);
+  left: 0px;
+  bottom: 0px;
+  background-color: #414141;
+  color: #9d9d9d;
+  footer {
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+}
