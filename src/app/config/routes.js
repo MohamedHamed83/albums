@@ -18,11 +18,20 @@ export default function routes($stateProvider, $urlRouterProvider, $locationProv
       }
     })
     .state('albums', {
+      url: '/albums',
+      component: 'albumsComponent',
+      resolve: {
+        allAlbums: ($resourceService) => {
+          return $resourceService.getAllAlbums();
+        }
+      }
+    })
+    .state('albumsPerUser', {
       url: '/albums/:userId',
       component: 'albumsComponent',
       resolve: {
         allAlbums: ($resourceService, $stateParams) => {
-           return $resourceService.getAllAlbumsById($stateParams.userId);
+          return $resourceService.getAllAlbumsById($stateParams.userId);
         }
       }
     })

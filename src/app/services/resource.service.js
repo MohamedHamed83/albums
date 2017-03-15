@@ -37,6 +37,19 @@ class resourceService {
    *
    * @returns {Array} list of albums.
    */
+  getAllAlbums() {
+    return this.$resource('http://jsonplaceholder.typicode.com/albums').query();
+  }
+
+  /**
+   * @ngdoc method
+   * @name $resourceService#getAllAlbumsById
+   *
+   * @description
+   * Returns list of albums.
+   *
+   * @returns {Array} list of albums.
+   */
   getAllAlbumsById(id) {
     return this.$resource(`http://jsonplaceholder.typicode.com/albums?userId=${id}`).query();
   }

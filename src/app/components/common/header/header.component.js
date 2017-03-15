@@ -12,7 +12,6 @@ let headerComponent = {
   controllerAs: 'headerCtrl',
   controller: headerController,
   bindings: {
-
     navbarLinkes: '='
   }
 };
