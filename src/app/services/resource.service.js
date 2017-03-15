@@ -1,3 +1,5 @@
+import 'angular-resource';
+import 'angular-ui-router';
 class resourceService {
 
   constructor($resource, $state) {
@@ -74,7 +76,7 @@ class resourceService {
  * @module resourceModule
  * @description this module Provides HTTP Methods
  */
-export default angular.module('resourceModule', [])
+export default angular.module('resourceModule', ['ngResource', 'ui.router'])
   /**
    * @ngdoc service
    * @name $resourceService

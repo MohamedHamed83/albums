@@ -22,7 +22,3 @@ Fork this repo from inside GitHub so you can commit directly to your account, or
 #### Build
 
 - To Bulid to project run command 'npm run build'
-
-#### Generate Documentation 
-
-- To Bulid to project run command 'npm run docs'

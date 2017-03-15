@@ -2,7 +2,7 @@
 import template from './users.html';
 // component controller
 export class usersController {
-  constructor($timeout, $resourceService) {
+  constructor($resourceService) {
     'ngInject';
     this.searchString = '';
     this.$timeout = $timeout;
