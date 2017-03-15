@@ -12,8 +12,11 @@ export default function routes($stateProvider, $urlRouterProvider, $locationProv
       url: '/',
       component: 'albumsComponent',
       resolve: {
-        allAlbums: ($resourceService) => {
-          return $resourceService.getAllAlbums();
+        allAlbums: ($resourceService, $q) => {
+          return $q.all([
+            $resourceService.getAllAlbums(),
+            $resourceService.getAllUsers()
+          ]);
         }
       }
     });
