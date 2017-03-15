@@ -5,7 +5,6 @@ export class usersController {
   constructor($resourceService) {
     'ngInject';
     this.searchString = '';
-    this.$timeout = $timeout;
     this.$resourceService = $resourceService;
   }
   // get selected item from the list view
