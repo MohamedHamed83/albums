@@ -1,8 +1,13 @@
 <li ng-class="listItem.selected ? 'active' : ''">
   <div class="listrap-toggle">
     <span></span>
-    <img class="img-circle"  />
+    <img class="img-circle" />
   </div>
-  <div class="title" ng-click="listItemCtrl.selectedListItem(listItemCtrl.listItem)">{{listItemCtrl.listItem.url}}</div>
-  <div class="title" ng-if='listItemCtrl.listItem.title'>{{listItemCtrl.listItem.title}}</div>
+    <div class="title" ng-click="listItemCtrl.selectedListItem(listItemCtrl.listItem)" ng-if='listItemCtrl.listItem.title'>
+      <span class="vm-header">Title:</span> 
+      {{listItemCtrl.listItem.title}}
+  </div>
+  <div class="title" ng-click="listItemCtrl.selectedListItem(listItemCtrl.listItem)" ng-if='listItemCtrl.listItem.title'>
+      <span class="vm-header">User Name:</span>  {{listItemCtrl.listItem.username}}
+  </div>
 </li>

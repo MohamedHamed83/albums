@@ -52,6 +52,9 @@ list-item-component {
       @include vertical-align();
     }
     height: 100%;
+    .vm-header{
+      color: #FC4A1A;
+    }
     .title {
       @include make-xs-column(6);
       @include make-sm-column(6);

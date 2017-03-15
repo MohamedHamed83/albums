@@ -6,19 +6,21 @@ export class albumsController {
     'ngInject';
     this.searchString = '';
     this.$timeout = $timeout;
+    this.albumsPerUser = [];
   }
   // get selected item from the list view
   getSelectedListItem(item) {
-
+    console.log(item);
   }
   $onInit() {
     const albumsCrl = this;
     albumsCrl.$timeout(() => {
+      // merge users api with albums api in one array
       const mergedList = _.map(albumsCrl.allAlbums[0], function (item) {
         return _.assign(item, _.find(albumsCrl.allAlbums[1], ['id', item.userId]));
       });
       albumsCrl.allAlbums = mergedList;
-    }, 0);
+    }, 100);
   }
 }
 //component settings
