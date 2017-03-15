@@ -22,3 +22,7 @@ Fork this repo from inside GitHub so you can commit directly to your account, or
 #### Build
 
 - To Bulid to project run command 'npm run build'
+
+## Demo 
+
+http://photo-album.kissr.com
