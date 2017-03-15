@@ -2,15 +2,15 @@
 import template from './albums.html';
 // component controller
 export class albumsController {
-  constructor($timeout) {
+  constructor($timeout, $resourceService) {
     'ngInject';
     this.searchString = '';
     this.$timeout = $timeout;
-    this.albumsPerUser = [];
+    this.$resourceService = $resourceService;
   }
   // get selected item from the list view
   getSelectedListItem(item) {
-    console.log(item);
+    this.$resourceService.loadRoute('photosPerAlbum', item.id);
   }
   $onInit() {
     const albumsCrl = this;
@@ -20,7 +20,7 @@ export class albumsController {
         return _.assign(item, _.find(albumsCrl.allAlbums[1], ['id', item.userId]));
       });
       albumsCrl.allAlbums = mergedList;
-    }, 100);
+    }, 200);
   }
 }
 //component settings

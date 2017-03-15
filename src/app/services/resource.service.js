@@ -1,8 +1,38 @@
 class resourceService {
 
-  constructor($resource) {
+  constructor($resource, $state) {
     'ngInject';
     this.$resource = $resource;
+    this.$state = $state;
+  }
+  /**
+   * @ngdoc method
+   * @name $plansSvc#loadRoute
+   * @param {string} view name
+   * @param {string} view params
+   * @description
+   * load selected ui route.
+   */
+  loadRoute(view, params) {
+    if (params) {
+      this.$state.go(view, {
+        albumId: params
+      });
+    } else {
+      this.$state.go(view);
+    }
+  }
+  /**
+   * @ngdoc method
+   * @name $resourceService#getPhotosPerAlbums
+   *
+   * @description
+   * Returns list of  photos Per Album.
+   *
+   * @returns {Array} list of photos Per Album.
+   */
+  getPhotosPerAlbums(id) {
+    return this.$resource(`http://jsonplaceholder.typicode.com/photos?albumId=${id}`).query();
   }
   /**
    * @ngdoc method

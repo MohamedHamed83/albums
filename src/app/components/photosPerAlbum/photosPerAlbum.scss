@@ -1,0 +1,11 @@
+albums-component {
+  listview-component {
+    list-item-component {
+      .listrap-toggle {
+        img {
+          content: url('../img/album.png') !important;
+        }
+      }
+    }
+  }
+}

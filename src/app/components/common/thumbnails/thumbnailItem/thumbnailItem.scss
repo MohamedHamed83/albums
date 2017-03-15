@@ -1,44 +1,12 @@
 thumbnail-item-component {
-  @include make-xs-column(12);
-  @include make-sm-column(6);
-  @include make-md-column(3);
-  @include make-lg-column(3);
-  @include make-xl-column(3);
-  .btn-info:hover,
-  .btn-info:active,
-  .btn-info:focus,
-  .btn-info.focus {
-    background-color: #012525 !important;
-    border-color: #012525 !important;
-  }
-  .btn-info {
-    background-color: #024d4d;
-    border-color: #024d4d;
-  }
+  @include make-xs-column(6);
+  @include make-sm-column(3);
+  @include make-md-column(2);
+  @include make-lg-column(2);
+  @include make-xl-column(1.5);
   button,
   h4 {
     display: inline-block;
-  }
-  .vm-delete {
-    @extend .pull-right;
-    display: none;
-  }
-  .vm-update {
-    @extend .pull-left;
-    display: none;
-  }
-  .caption:hover {
-    .vm-update {
-      @include fadeIn( $duration: 1s, $count: 1, $delay: 0s, $function: ease, $fill: both);
-      display: inline-block;
-    }
-    .vm-delete {
-      @include fadeIn( $duration: 1s, $count: 1, $delay: 0s, $function: ease, $fill: both);
-      display: inline-block;
-    }
-    h4{
-      width: 30%;
-    }
   }
   .vm-options-list {
     width: 95%;
@@ -68,9 +36,8 @@ thumbnail-item-component {
   }
   .thumbnail img {
     height: 150px;
-    background-position: 45%;
-    background-size: cover !important;
-    background-repeat: no-repeat;
+    background-position: 45% !important;
+    background-repeat: no-repeat !important;
     width: 98%;
     margin-top: 4px;
   }

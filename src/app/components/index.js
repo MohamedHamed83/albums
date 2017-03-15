@@ -9,11 +9,12 @@ import './common/thumbnails/index';
 
 //stateful components
 import './albums/albums.component';
-
+import './photosPerAlbum/photosPerAlbum.component';
 //application components module
 export default angular.module('components', [
     'ngSearchBarModule', 'homeModule',
     'ngHeaderModule', 'ngFooterModule', 'ngNavbarModule',
-    'nglistviewModule', 'ngThumbnailsModule', 'albumsModule'
+    'nglistviewModule', 'ngThumbnailsModule', 'albumsModule',
+    'photosPerAlbumModule'
   ])
   .name;

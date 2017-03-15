@@ -19,6 +19,15 @@ export default function routes($stateProvider, $urlRouterProvider, $locationProv
           ]);
         }
       }
+    })
+    .state('photosPerAlbum', {
+      url: '/photos-per-album/:albumId',
+      component: 'photosPerAlbumComponent',
+      resolve: {
+        allPhotosPerAlbum: ($resourceService, $stateParams) => {
+          return $resourceService.getPhotosPerAlbums($stateParams.albumId);
+        }
+      }
     });
 
 }
