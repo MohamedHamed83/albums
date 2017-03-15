@@ -3,7 +3,7 @@
 
 export default function routes($stateProvider, $urlRouterProvider, $locationProvider, cfpLoadingBarProvider) {
   'ngInject';
-  cfpLoadingBarProvider.includeSpinner = false;
+  cfpLoadingBarProvider.includeSpinner = true;
   $locationProvider.html5Mode(false);
   $urlRouterProvider.otherwise('/');
   // albums routes

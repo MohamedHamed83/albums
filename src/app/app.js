@@ -1,6 +1,6 @@
 import 'angular-ui-router';
 import 'angular-loading-bar';
-import ngAnimate from 'angular-animate';
+import 'angular-animate';
 import 'angular-resource';
 // config files
 import './config/route-to-component';
@@ -17,6 +17,6 @@ import './services/resource.service';
  * @description This is the main module for application
  */
 
-angular.module('albums', ['ui.router', 'ngResource', 'ui.router.components', 'angular-loading-bar', 'components', 'resourceModule', ngAnimate])
+angular.module('albums', ['ui.router', 'ngResource', 'ui.router.components', 'components', 'resourceModule', 'angular-loading-bar', 'ngAnimate'])
   .config(routes)
   .name;
