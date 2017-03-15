@@ -9,8 +9,8 @@ describe('home', () => {
     let controller;
     const mockProjectFooter = 'albums';
     const mockNavbarLinkes = [{
-      text: 'Albums',
-      uiSref: 'albums'
+      text: 'users',
+      uiSref: 'users'
     }];
     beforeEach(inject(($injector) => {
       $componentController = $injector.get('$componentController');

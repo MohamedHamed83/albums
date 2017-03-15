@@ -8,6 +8,12 @@ thumbnail-item-component {
   h4 {
     display: inline-block;
   }
+  .modal-header {
+    background-color: rgba(42, 44, 43, 1) !important;
+  }
+  .modal-dialog {
+    vertical-align: middle;
+  }
   .vm-options-list {
     width: 95%;
     height: 90%;
@@ -22,6 +28,21 @@ thumbnail-item-component {
     box-shadow: inset 0 0 0 2px #DFDCE3, 0 0 1px transparent;
     background-color: transparent;
     cursor: pointer;
+  }
+  .larg-thumbnail {
+    display: block;
+    padding: 0;
+    border-color: transparent;
+    box-shadow: inset 0 0 0 2px #DFDCE3, 0 0 1px transparent;
+    background-color: transparent;
+    cursor: pointer;
+    img {
+      height: 600px;
+      background-position: 50% !important;
+      background-repeat: no-repeat !important;
+      width: 100%;
+      margin-top: 4px;
+    }
   }
   .thumbnail:hover,
   .thumbnail:active {

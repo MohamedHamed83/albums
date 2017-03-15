@@ -1,7 +1,26 @@
 <div class="thumbnail" ng-click="thumbnailItemCtrl.selectedListItem(thumbnailItemCtrl.listItem)">
-  <img ng-if='thumbnailItemCtrl.listItem.thumbnailUrl'
-    style='background: url("{{thumbnailItemCtrl.listItem.thumbnailUrl}}")' />
+  <img ng-if='thumbnailItemCtrl.listItem.thumbnailUrl' style='background: url("{{thumbnailItemCtrl.listItem.thumbnailUrl}}")'
+  />
   <div class="caption">
     <h4 ng-if='thumbnailItemCtrl.listItem.title'>{{thumbnailItemCtrl.listItem.title}}</h4>
+  </div>
+</div>
+<div tabindex="-1" class="modal fade" id="thumbnailModal{{thumbnailItemCtrl.listItem.id}}" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" type="button" data-dismiss="modal">×</button>
+        <h3 class="modal-title">{{thumbnailItemCtrl.listItem.title}}</h3>
+      </div>
+      <div class="modal-body">
+        <div class="larg-thumbnail" ng-click="thumbnailItemCtrl.selectedListItem(thumbnailItemCtrl.listItem)">
+          <img ng-if='thumbnailItemCtrl.listItem.url' style='background: url("{{thumbnailItemCtrl.listItem.url}}")'
+          />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>

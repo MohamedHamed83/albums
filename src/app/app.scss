@@ -15,13 +15,16 @@ $fa-font-path:'~font-awesome/fonts/';
 @import "./components/common/header/header";
 @import "./components/common/navbar/navbar";
 @import "./components/common/footer/footer";
-@import "./components/home/home";
 @import "./components/common/searchBar/searchBar";
 @import "./components/common/thumbnails/thumbnailItem/thumbnailItem";
 @import "./components/common/thumbnails/thumbnailView/thumbnailView";
 @import "./components/common/list/listview/listview";
 @import "./components/common/list/listItem/listItem";
+//statfull component stylesheets
 @import "./components/albums/albums";
+@import "./components/home/home";
+@import "./components/users/users";
+
 ui-view {
   @extend .row;
   background-repeat: no-repeat;

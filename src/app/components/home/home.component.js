@@ -6,8 +6,8 @@ class homeController {
     'ngInject';
     this.projectFooter = 'albums';
     this.navbarLinkes = [{
-        text: 'Albums',
-        uiSref: 'albums'
+        text: 'users',
+        uiSref: 'users'
       }
     ];
   }

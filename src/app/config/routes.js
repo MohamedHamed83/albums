@@ -8,15 +8,21 @@ export default function routes($stateProvider, $urlRouterProvider, $locationProv
   $urlRouterProvider.otherwise('/');
   // albums routes
   $stateProvider
-    .state('albums', {
+    .state('users', {
       url: '/',
+      component: 'usersComponent',
+      resolve: {
+        allUsers: ($resourceService) => {
+          return $resourceService.getAllUsers();
+        }
+      }
+    })
+    .state('albums', {
+      url: '/albums/:userId',
       component: 'albumsComponent',
       resolve: {
-        allAlbums: ($resourceService, $q) => {
-          return $q.all([
-            $resourceService.getAllAlbums(),
-            $resourceService.getAllUsers()
-          ]);
+        allAlbums: ($resourceService, $stateParams) => {
+           return $resourceService.getAllAlbumsById($stateParams.userId);
         }
       }
     })

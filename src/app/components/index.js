@@ -8,6 +8,7 @@ import './common/list/index';
 import './common/thumbnails/index';
 
 //stateful components
+import './users/users.component';
 import './albums/albums.component';
 import './photosPerAlbum/photosPerAlbum.component';
 //application components module
@@ -15,6 +16,6 @@ export default angular.module('components', [
     'ngSearchBarModule', 'homeModule',
     'ngHeaderModule', 'ngFooterModule', 'ngNavbarModule',
     'nglistviewModule', 'ngThumbnailsModule', 'albumsModule',
-    'photosPerAlbumModule'
+    'photosPerAlbumModule', 'usersModule'
   ])
   .name;

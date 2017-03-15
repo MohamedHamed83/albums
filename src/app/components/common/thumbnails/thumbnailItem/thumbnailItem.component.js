@@ -7,11 +7,11 @@ export class thumbnailItemController {
     'ngInject';
 
   }
-  $onInit() {
-  }
+  $onInit() {}
   selectedListItem(listItem) {
-    //select list item and add active class to the item
-    listItem.selected = true;
+    $('#thumbnailModal'+ listItem.id).modal({
+      show: true
+    });
     //passing selected item to list view component
     this.setSelectedItem({
       item: listItem
@@ -28,4 +28,3 @@ export const thumbnailItemComponent = {
     setSelectedItem: '&'
   }
 };
-

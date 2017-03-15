@@ -13,14 +13,8 @@ class resourceService {
    * @description
    * load selected ui route.
    */
-  loadRoute(view, params) {
-    if (params) {
-      this.$state.go(view, {
-        albumId: params
-      });
-    } else {
-      this.$state.go(view);
-    }
+  loadRoute(view, query) {
+    this.$state.go(view, query);
   }
   /**
    * @ngdoc method
@@ -43,8 +37,8 @@ class resourceService {
    *
    * @returns {Array} list of albums.
    */
-  getAllAlbums() {
-    return this.$resource('http://jsonplaceholder.typicode.com/albums').query();
+  getAllAlbumsById(id) {
+    return this.$resource(`http://jsonplaceholder.typicode.com/albums?userId=${id}`).query();
   }
   /**
    * @ngdoc method
